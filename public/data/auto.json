@@ -1,0 +1,575 @@
+{
+  "subject": "EdmundsDemo",
+  "columns": [
+    {
+      "key": "rentabilidade",
+      "full_name": "Rentabilidade",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "range": {
+          "low" : 2,
+          "high" : 10
+      },
+      "format": "number:0 | taSuffix:' %'",
+      "description": "Percentual de rentabilidade"
+    },
+    {
+      "key": "risco",
+      "full_name": "Risco",
+      "type": "categorical",
+      "is_objective": false,
+      "goal": "min",
+      "range": [
+        "Baixo",
+        "Médio",
+        "Alto",
+        "Muito Alto"
+      ],
+      "preference": [
+        "Baixo",
+        "Médio",
+        "Alto",
+        "Muito Alto"
+      ],
+      "description": "Grau de risco"
+    },
+    {
+      "key": "taxas",
+      "full_name": "Taxa Administrativa",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "min",
+      "format": "number:1 | taSuffix:' %'",
+      "range": {
+        "low": 0,
+        "high": 5
+      },
+      "description": "Taxas administrativas"
+    },
+    {
+      "key": "contribuicao",
+      "full_name": "Contribuição",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "min",
+      "format": "number:2 | taPrefix : 'R$ '",
+      "description": "Baixa contribuição",
+      "range": {
+        "low": 50,
+        "high": 5000
+      }
+    },
+    {
+      "key": "aporte",
+      "full_name": "Aporte",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:2 | taPrefix : 'R$ '",
+      "range": {
+        "low": 500,
+        "high": 50000
+      },
+      "description": "Aporte Mínimo"
+    },
+    {
+      "key": "tempocontribuicao",
+      "full_name": "Tempo de Contribuição",
+      "type": "numeric",
+      "is_objective": false,
+      "goal": "max",
+      "format": "number:2 | taSuffix:' anos'",
+      "range": {
+        "low": 10,
+        "high": 30
+      },
+      "description": "Tempo de Contribuição"
+    }
+  ],
+  "options": [
+    {
+      "key": 200727569,
+      "name": "Bradesco FiCFI Renda Fixa PGBL RF24",
+      "description": "Bradesco FiCFI Renda Fixa PGBL RF24",
+      "values": {
+        "rentabilidade": 3,
+        "risco":"Baixo",
+        "taxas": 2.4,
+        "contribuicao": 50,
+        "aporte": 500,
+        "tempocontribuicao": 30
+      }
+    },
+    {
+      "key": 200726801,
+      "name": "Bradesco FiCFI Renda Fixa PGBL RF19",
+      "description": "Bradesco FiCFI Renda Fixa PGBL RF19",
+      "values": {
+        "rentabilidade": 3,
+        "risco":"Baixo",
+        "taxas": 1.9,
+        "contribuicao": 1000,
+        "aporte": 10000,
+        "tempocontribuicao": 30
+      }
+    },
+    {
+      "key": 200732587,
+      "name": "Bradesco FiCFI Renda Fixa PGBL RF15",
+      "description": "Bradesco FiCFI Renda Fixa PGBL RF15",
+      "values": {
+        "rentabilidade": 3,
+        "risco":"Baixo",
+        "taxas": 1.5,
+        "contribuicao": 1500,
+        "aporte": 20000,
+        "tempocontribuicao": 30
+      }
+    },
+    {
+      "key": 200729234,
+      "name": "Bradesco FiCFI Renda Fixa PGBL RF12",
+      "description": "Bradesco FiCFI Renda Fixa PGBL RF12",
+      "values": {
+        "rentabilidade": 3,
+        "risco":"Baixo",
+        "taxas": 1.2,
+        "contribuicao": 2000,
+        "aporte": 50000,
+        "tempocontribuicao": 20
+      }
+    },
+    {
+      "key": 401583116,
+      "name": "Bradesco FiCFI Renda Fixa PGBL RF10",
+      "description": "Bradesco FiCFI Renda Fixa PGBL RF10",
+      "values": {
+        "rentabilidade": 3.0,
+        "risco":"Baixo",
+        "taxas": 1.0,
+        "contribuicao": 2500,
+        "aporte": 100000,
+        "tempocontribuicao": 20
+      }
+    },
+    {
+      "key": 401630280,
+      "name": "Bradesco FiCFI Renda Fixa VGBL RF24",
+      "description": "Bradesco FiCFI Renda Fixa VGBL RF24",
+      "values": {
+        "rentabilidade": 3.5,
+        "risco":"Baixo",
+        "taxas": 2.4,
+        "contribuicao": 50,
+        "aporte": 500,
+        "tempocontribuicao": 15
+      }
+    },
+    {
+      "key": 401632434,
+      "name": "Bradesco FiCFI Renda Fixa VGBL RF19",
+      "description": "Bradesco FiCFI Renda Fixa VGBL RF19",
+      "values": {
+        "rentabilidade": 3.5,
+        "risco":"Baixo",
+        "taxas": 1.9,
+        "contribuicao": 1000,
+        "aporte": 70000,
+        "tempocontribuicao": 15
+      }
+    },
+    {
+      "key": 401632440,
+      "name": "Bradesco FiCFI Renda Fixa VGBL RF15",
+      "description": "Bradesco FiCFI Renda Fixa VGBL RF15",
+      "values": {
+        "rentabilidade": 3.5,
+        "risco":"Baixo",
+        "taxas": 1.5,
+        "contribuicao": 1500,
+        "aporte": 130000,
+        "tempocontribuicao": 15
+      }
+    },
+    {
+      "key": 401633360,
+      "name": "Bradesco FiCFI Renda Fixa VGBL RF12",
+      "description": "Bradesco FiCFI Renda Fixa VGBL RF12",
+      "values": {
+       "rentabilidade": 3.5,
+        "risco":"Baixo",
+        "taxas": 1.2,
+        "contribuicao": 2000,
+        "aporte": 250000,
+        "tempocontribuicao": 10
+      }
+    },
+    
+    {
+		"key": 1,
+		"name": "Bradesco FiCFI Renda Fixa PGBL RF19 R",
+		"description": "Bradesco FiCFI Renda Fixa PGBL RF19 R",
+		"values": {
+			"rentabilidade": 3.00,
+			"risco": "Baixo",
+			"taxas": 1.90,
+			"contribuicao": 1000.00,
+			"aporte": 10000.00,
+			"tempocontribuicao": 25
+		}
+	},
+	{
+		"key": 2,
+		"name": "Bradesco FiCFI Renda Fixa PGBL RF15 R",
+		"description": "Bradesco FiCFI Renda Fixa PGBL RF15 R",
+		"values": {
+			"rentabilidade": 3.00,
+			"risco": "Baixo",
+			"taxas": 1.50,
+			"contribuicao": 1500.00,
+			"aporte": 20000.00,
+			"tempocontribuicao": 25
+		}
+	},
+	{
+		"key": 3,
+		"name": "Bradesco FiCFI Renda Fixa PGBL RF12 R",
+		"description": "Bradesco FiCFI Renda Fixa PGBL RF12 R",
+		"values": {
+			"rentabilidade": 3.00,
+			"risco": "Baixo",
+			"taxas": 1.20,
+			"contribuicao": 2000.00,
+			"aporte": 50000.00,
+			"tempocontribuicao": 20
+		}
+	},
+	{
+		"key": 4,
+		"name": "Bradesco FiCFI Renda Fixa PGBL RF10 R",
+		"description": "Bradesco FiCFI Renda Fixa PGBL RF10 R",
+		"values": {
+			"rentabilidade": 3.00,
+			"risco": "Baixo",
+			"taxas": 1.00,
+			"contribuicao": 2500.00,
+			"aporte": 100000.00,
+			"tempocontribuicao": 20
+		}
+	},
+	{
+		"key": 5,
+		"name": "Bradesco FiCFI Renda Fixa VGBL RF24 R",
+		"description": "Bradesco FiCFI Renda Fixa VGBL RF24 R",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Baixo",
+			"taxas": 2.40,
+			"contribuicao": 50.00,
+			"aporte": 500.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 6,
+		"name": "Bradesco FiCFI Renda Fixa VGBL RF19 R",
+		"description": "Bradesco FiCFI Renda Fixa VGBL RF19 R",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Baixo",
+			"taxas": 1.90,
+			"contribuicao": 1000.00,
+			"aporte": 30000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 7,
+		"name": "Bradesco FiCFI Renda Fixa VGBL RF15 R",
+		"description": "Bradesco FiCFI Renda Fixa VGBL RF15 R",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Baixo",
+			"taxas": 1.50,
+			"contribuicao": 1500.00,
+			"aporte": 80000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 8,
+		"name": "Bradesco FiCFI Renda Fixa VGBL RF12 R",
+		"description": "Bradesco FiCFI Renda Fixa VGBL RF12 R",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Baixo",
+			"taxas": 1.20,
+			"contribuicao": 2000.00,
+			"aporte": 200000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 9,
+		"name": "Bradesco FiCFI Renda Fixa VGBL RF10 R",
+		"description": "Bradesco FiCFI Renda Fixa VGBL RF10 R",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Baixo",
+			"taxas": 1.00,
+			"contribuicao": 3500.00,
+			"aporte": 250000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 10,
+		"name": "Bradesco FiCFI Multi PGBL V15/30",
+		"description": "Bradesco FiCFI Multi PGBL V15/30",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Médio",
+			"taxas": 3.00,
+			"contribuicao": 50.00,
+			"aporte": 500.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 11,
+		"name": "Bradesco FiCFI Multi VGBL V49/24",
+		"description": "Bradesco FiCFI Multi VGBL V49/24",
+		"values": {
+			"rentabilidade": 7.00,
+			"risco": "Muito alto",
+			"taxas": 2.40,
+			"contribuicao": 50.00,
+			"aporte": 500.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 12,
+		"name": "Bradesco FiCFI Multi PGBL V49/24",
+		"description": "Bradesco FiCFI Multi PGBL V49/24",
+		"values": {
+			"rentabilidade": 7.00,
+			"risco": "Muito alto",
+			"taxas": 2.40,
+			"contribuicao": 50.00,
+			"aporte": 500.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 13,
+		"name": "Bradesco FiCFI Multi VGBL V49/24",
+		"description": "Bradesco FiCFI Multi VGBL V49/24",
+		"values": {
+			"rentabilidade": 7.00,
+			"risco": "Muito alto",
+			"taxas": 2.40,
+			"contribuicao": 50.00,
+			"aporte": 500.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 14,
+		"name": "Bradesco FiCFI Multi PGBL V30/19",
+		"descritpion": "Bradesco FiCFI Multi PGBL V30/19",
+		"values": {
+			"rentabilidade": 4.50,
+			"risco": "Alto",
+			"taxas": 1.90,
+			"contribuicao": 1000.00,
+			"aporte": 10000.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 15,
+		"name": "Bradesco FiCFI Multi VGBL V30/19",
+		"description": "Bradesco FiCFI Multi VGBL V30/19",
+		"values": {
+			"rentabilidade": 4.50,
+			"risco": "Alto",
+			"taxas": 1.90,
+			"contribuicao": 1000.00,
+			"aporte": 70000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 16,
+		"name": "Bradesco FiCFI Multi RF A",
+		"description": "Bradesco FiCFI Multi RF A",
+		"values": {
+			"rentabilidade": 4.00,
+			"risco": "Baixo",
+			"taxas": 0.70,
+			"contribuicao": 5000.00,
+			"aporte": 400000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 17,
+		"name": "Bradesco FiCFI Multi PGBL Dinamico",
+		"decription": "Bradesco FiCFI Multi PGBL Dinamico",
+		"values": {
+			"rentabilidade": 5.50,
+			"risco": "Alto",
+			"taxas": 1.50,
+			"contribuicao": 2500.00,
+			"aporte": 20000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 18,
+		"name": "Bradesco FiCFI Multi VGBL Dinamico",
+		"description": "Bradesco FiCFI Multi VGBL Dinamico",
+		"values": {
+			"rentabilidade": 5.50,
+			"risco": "Alto",
+			"taxas": 1.50,
+			"contribuicao": 3500.00,
+			"aporte": 130000.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 19,
+		"name": "Bradesco FiCFI Multi PGBL V15/15",
+		"description": "Bradesco FiCFI Multi PGBL V15/15",
+		"values": {
+			"rentabilidade": 6.00,
+			"risco": "Médio",
+			"taxas": 1.50,
+			"contribuicao": 2500.00,
+			"aporte": 20000.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 20,
+		"name": "Bradesco FiCFI Multi VGBL V15/15",
+		"description": "Bradesco FiCFI Multi VGBL V15/15",
+		"values": {
+			"rentabilidade": 6.00,
+			"risco": "Médio",
+			"taxas": 1.50,
+			"contribuicao": 3500.00,
+			"aporte": 130000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 21,
+		"name": "Bradesco FiCFI Multi PGBL RF10C",
+		"description": "Bradesco FiCFI Multi PGBL RF10C",
+		"values": {
+			"rentabilidade": 5.00,
+			"risco": "Médio",
+			"taxas": 1.00,
+			"contribuicao": 2500.00,
+			"aporte": 10000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 22,
+		"name": "Bradesco FiCFI Multi VGBL RF10C",
+		"description": "Bradesco FiCFI Multi VGBL RF10C",
+		"values": {
+			"rentabilidade": 5.00,
+			"risco": "Médio",
+			"taxas": 1.00,
+			"contribuicao": 3000.00,
+			"aporte": 20000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 23,
+		"name": "Bradesco FiCFI Multi RF Credito Privado PGBL",
+		"description": "Bradesco FiCFI Multi RF Credito Privado PGBL",
+		"values": {
+			"rentabilidade": 5.50,
+			"risco": "Médio",
+			"taxas": 1.00,
+			"contribuicao": 2500.00,
+			"aporte": 10000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 24,
+		"name": "Bradesco FiCFI Multi RF Credito Privado VGBL",
+		"description": "Bradesco FiCFI Multi RF Credito Privado VGBL",
+		"values": {
+			"rentabilidade": 5.50,
+			"risco": "Médio",
+			"taxas": 1.00,
+			"contribuicao": 3000.00,
+			"aporte": 20000.00,
+			"tempocontribuicao": 15
+		}
+	},
+	{
+		"key": 25,
+		"name": "Bradesco Private FiCFI Renda Fixa PGBL Ativo",
+		"description": "Bradesco Private FiCFI Renda Fixa PGBL Ativo",
+		"values": {
+			"rentabilidade": 6.00,
+			"risco": "Médio",
+			"taxas": 0.80,
+			"contribuicao": 3000.00,
+			"aporte": 200000.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 26,
+		"name": "Bradesco Private FiCFI Renda Fixa VGBL Ativo",
+		"description": "Bradesco Private FiCFI Renda Fixa VGBL Ativo",
+		"values": {
+			"rentabilidade": 6.00,
+			"risco": "Médio",
+			"taxas": 0.80,
+			"contribuicao": 4000.00,
+			"aporte": 300000.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 27,
+		"name": "Bradesco Private FiCFI Renda Fixa PGBL",
+		"description": "Bradesco Private FiCFI Renda Fixa PGBL",
+		"values": {
+			"rentabilidade": 6.50,
+			"risco": "Médio",
+			"taxas": 0.80,
+			"contribuicao": 3500.00,
+			"aporte": 200000.00,
+			"tempocontribuicao": 10
+		}
+	},
+	{
+		"key": 28,
+		"name": "Bradesco Private FiCFI Renda Fixa VGBL",
+		"description": "Bradesco Private FiCFI Renda Fixa VGBL",
+		"values": {
+			"rentabilidade": 6.50,
+			"risco": "Médio",
+			"taxas": 0.80,
+			"contribuicao": 4000.00,
+			"aporte": 300000.00,
+			"tempocontribuicao": 10
+		}
+	}
+    
+  ]
+}

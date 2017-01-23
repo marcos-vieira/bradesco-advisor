@@ -1,0 +1,12 @@
+---
+declared-services:
+  bradesco-advisor-tradeoff:
+    label: tradeoff_analytics
+    plan: standard
+applications:
+- services:
+  - bradesco-advisor-tradeoff
+  name: bradesco-advisor
+  command: npm start
+  path: .
+  memory: 256M
